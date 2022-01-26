@@ -24,9 +24,7 @@ class: center, middle
 
 Pierre Ablin
 
-.affiliations[
-  ![École Normale Supérieure](images/logo_ens_psl_couleur.png)
-]
+
 
 .footnote.tiny[Credits: many contents and figures are borrowed from the scikit-learn [mooc](https://github.com/inria/scikit-learn-mooc/) and scipy
 [lecture notes](https://scipy-lectures.org/packages/scikit-learn/index.html).]
@@ -560,10 +558,10 @@ In 2-d, if you only have $2$ points, you can always separate them with a line.
 
 ## Example:
 
-Target $y$: number of covid cases in France in the last 3 days
+Target $y$: SP 500 index in the last 3 days
 
 
-$y = (23292, 23924, 18436)$
+$y = (4532, 4470, 4356)$
 
 --
 
@@ -582,7 +580,7 @@ $y = (23292, 23924, 18436)$
 You can check that:
 
 $$
-y = -54421 \times x_1 -100232 \times x_2 + 147148 \times x_3
+y = -1757 \times x_1 -1355\times x_2 + 1065\times x_3
 $$
 
 
@@ -592,7 +590,7 @@ $$
 How do you estimate the regression coefficient?
 
 
-$$\min_{w} \| Xw - y\|^2$$
+$$\min_{w} \frac12 \| Xw - y\|^2$$
 
 Optimization !
 
@@ -619,7 +617,7 @@ $\nabla f(w) = X^{\top}(Xw - y)$
 How do you estimate the regression coefficient?
 
 
-$$\min_{w} \| Xw - y\|^2 = f(w)$$
+$$\min_{w} \frac 12\| Xw - y\|^2 = f(w)$$
 
 Optimization !
 
@@ -651,7 +649,7 @@ $\lambda > 0$ is a hyperparameter
 ---
 # Ridge regression
 
-$$\min_{w} \| Xw - y\|^2 + \frac \lambda 2 \|w\|^2 = f(w)$$
+$$\min_{w}\frac12 \| Xw - y\|^2 + \frac \lambda 2 \|w\|^2 = f(w)$$
 
 Solution:
 
